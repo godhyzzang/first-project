@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한소희 작품 사진 모음</title>
+
+    <!-- css문서 따로 만들어서 외부 연결 -->
+    <link rel="stylesheet" href="css/photo_style.css"> 
+    
+</head>
+
+<!-- 한소희 출연작품 사진 모아놓은 페이지 -->
+<body>
+    <h1>필모그래피</h1> 
+    <h2>(한소희 출연작 사진 모음)</h2>
+    <p>*사진 클릭시 작품 이름이 나타납니다*</p>
+        <table  border="3">
+            <!-- image순서대로 1번부터 임의의 번호 부여 -->
+
+            <!-- 표 1열 -->
+            <tr class="img">
+                <td  class="td">
+                    <image  onclick="text(1);" src="https://img.insight.co.kr/static/2020/04/12/700/f975yq8tz13l6t5pb1p5.jpg"></image>
+                    <div id="1"></div>
+                </td>
+                <td  class="td">
+                    <image onclick="text(2);"src="https://img.insight.co.kr/static/2020/04/12/700/pqwcn951gpavo803biu6.jpg"></image>
+                    <div id="2"></div>
+                </td>
+                <td  class="td">
+                    <image onclick="text(3)"; src="https://t1.daumcdn.net/cfile/tistory/9908AB485BCF2A2904"></image>
+                    <div id="3"></div>
+                </td>
+            </tr>
+            <!-- 표 2열 -->
+            <tr>
+                <td class="td">
+                    <image onclick="text(4)"; src="https://ww.namu.la/s/c99e2904f4f49d35fae0d25d0f71d21a43c3e00cc1839f9fb4aeced21d0c1ee92e3411abae6873c630f9059c6eb2bdc11a57c6ceb4483867d977bbc9ff437c0cb804eeed688edf09984ff1c007f422df"></image>
+                    <div id="4"></div>
+                </td>
+                <td class="td">
+                    <image onclick="text(5)"; src="https://pbs.twimg.com/media/FFjy3diVIAMEIof.jpg:large"></image>
+                    <div id="5"></div>
+                </td>
+                <td class="td">
+                    <image onclick="text(6)"; src="https://newsimg.sedaily.com/2020/04/09/1Z1EQ5MWTH_1.jpg"></image>
+                    <div id="6"></div>
+                </td>
+            </tr>
+            <!-- 표 3열 -->
+            <tr>
+                <td class="td">
+                    <image onclick="text(7)"; src="https://cdnweb01.wikitree.co.kr/webdata/editor/202108/08/img_20210808115339_2f963d82.webp"></image>
+                    <div id="7"></div>
+                </td>
+                <td class="td">
+                    <image onclick="text(8)"; src="http://cdnimage.dailian.co.kr/news/202110/news_1635162669_1045705_m_1.png"></image>
+                    <div id="8"></div>
+                </td>
+                <td class="td">
+                    <image onclick="text(9)"; src="https://image.xportsnews.com/contents/images/upload/article/2022/0317/1647477391402551.jpg"></image>
+                    <div id="9"></div>
+                </td>
+            </tr>
+            
+        </table>
+
+
+
+<!-- 자바스크립트 요소3 -->
+<!-- javascript 연결
+
+            css처럼 javascript도 외부 연결하려 했지만 알 수 없는 오류로 구현 실패.
+             따라서 우리 수업에서 썼던 방식처럼 javascript는 내부 연결함. -->
+    
+        <script type="text/javascript">
+            
+            /*사진 누르면 사진 밑에 텍스트 출력하는 함수*/
+function text(x){
+
+
+if(x=="1"){
+    document.getElementById("1").innerText ="드라마-'다시만난세계'";
+}
+else if(x=="2"){
+    document.getElementById("2").innerText ="드라마-'돈꽃'";
+}
+else if(x=="3"){
+    document.getElementById("3").innerText ="드라마-'백일의 낭군님'";
+}
+else if(x=="4"){
+    document.getElementById("4").innerText ="드라마-'어비스'";
+}
+else if(x=="5"){
+    document.getElementById("5").innerText ="드라마-'옥란면옥'";
+}
+else if(x=="6"){
+    document.getElementById("6").innerText ="드라마-'부부의 세계'";
+}
+else if(x=="7"){
+    document.getElementById("7").innerText ="드라마-'알고있지만'";
+}
+else if(x=="8"){
+    document.getElementById("8").innerText ="드라마-'마이네임'";
+}
+else{
+    document.getElementById("9").innerText ="드라마-'사운드트랙'";
+}
+
+
+}
+
+/*추후에라도 해결법을 찾기 위해 밑 부분 지우지 않고 주석 처리함.*/
+
+// 아래 방법으로 하면 '이유는 알 수 없지만' 새로고침 하지 않는 한 딱 한번의 클릭만 실행되고 나머지 클릭은 실행되지 않는다.
+
+// function text(x){
+//  if(x=="1"){
+//     text ="다시만난세계";
+//  }
+//  else if("x"==2){
+//     text="돈꽃";
+//  }
+//  else if(x=="3"){
+//    text ="드라마-'백일의 낭군님'";
+// }
+// else if(x=="4"){
+//     text ="드라마-'어비스'";
+// }
+// else if(x=="5"){
+//    text ="드라마-'옥란면옥'";
+// }
+// else if(x=="6"){
+//    text ="드라마-'부부의 세계'";
+// }
+// else if(x=="7"){
+//    text ="드라마-'알고있지만'";
+// }
+// else if(x=="8"){
+//    text ="드라마-'마이네임'";
+// }
+// else{
+//     text ="드라마-'사운드트랙'";
+// }
+
+
+
+// document.getElementById(x).innerText=text;
+// }
+
+
+        </script>
+
+
+
+</body>
+</html>

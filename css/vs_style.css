@@ -1,0 +1,30 @@
+@charset 'utf-8';
+/*css 초기화*/
+* {
+	margin: 0px;
+	padding: 0px;
+	
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+
+/* button 상하좌우 여유 공간 있도록 margin 설정 */
+button{
+    margin: 10px;
+}
+
+/* container라는 같은 class값 가지는 div라는 공간에 위치한
+button과 사진 모두 가운데 정렬에 가까워지도록 설정 */
+.container{
+    
+    margin:10px;
+    margin-left:30%;
+    margin-right:30%;
+    text-align:center;
+}

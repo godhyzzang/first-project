@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- html 내부 아닌 외부 css 파일 연결함 -->
+    <link rel="stylesheet" href="css/vs_style.css">
+    <title>최애 사진 대결</title>
+</head>
+<body>
+ <!-- 버튼 넣는 공간, 사진 넣는 공간 둘다 container라는 동일한 class를 가지는 
+  div로 선언하여 css처리 용이하게 만듦 -->
+        <div class="container">
+            <h1>최애 사진 대결</h1>
+          <h2>당신은 어떤 한소희가 좋은가요?</h2>
+          <button onclick="pinkshImg();">핑크한소희</button>
+          <button onclick="blueshImg();">블루한소희</button>
+        </div>
+
+        <!-- 버튼 누른 후 사진 출력 되는 공간 -->
+        <div class="container">
+            <img id="img" src="">
+        </div>
+
+        
+        <!-- 자바스크립트 요소 2 -->
+        <script type="text/javascript">
+          // '핑크한소희' 버튼 누르면 실행되는 함수
+          function pinkshImg() {
+            document.getElementById("img").src = "https://images.khan.co.kr/article/2021/07/15/l_2021071502000817500173602.jpg";
+          }
+          //'블루한소희' 버튼 누르면 실행되는 ㅎ마수
+          function blueshImg() {
+            document.getElementById("img").src = "https://thumb.mt.co.kr/06/2021/05/2021050111058239419_1.jpg";
+          }
+        </script>
+      </body>
+</body>
+</html>

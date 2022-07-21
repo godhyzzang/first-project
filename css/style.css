@@ -1,0 +1,176 @@
+@charset 'utf-8';
+/*css 초기화*/
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box; /*하단테두리*/
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+
+/*header*/
+header{
+	width:100%;
+}
+header .inner{ /*.클래스 앞에 띄어쓰기 무조건 필요!!!!주의할것*/
+	width:1180px; /*header길이*/
+	margin: 0px auto; /*좌우 margin auto설정-> 자옹으로 좌우정렬됨*/
+  
+	/*블로그 이름과 사진 사이 거리 확보*/	
+  padding-top:50px;
+margin-bottom: 50px;  
+}
+
+/* 'Tu es l'amour de ma vie.' 블로그 이름 속성 */
+header .inner h1{
+  
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333333;
+
+  text-shadow: 4px 4px 0px #8d918d, 8px 8px 0px #999999, 12px 12px 0px #CCCCCC;
+    
+}
+/* '한소희 덕질 블로그 글자' 속성 */
+header .inner h3{
+  text-align: center;
+  font-family : "serif";
+  font-weight: bold;
+  color: black;
+
+}
+
+
+
+/*표지 사진과 AWESOME글자 있는 가운데 영역*/
+figure{
+	width: 100%;
+
+	/*수칫값과 연산자 사이를 무조건 한 칸씩 띄어야 함*/
+	background: #000;
+	position: relative; /*부모 요소 relative*/
+	overflow: hidden; /*요소 크기가 너무커서 블록 사이즈에 맞출 수 없을 때 '숨기는' 스타일 방식*/
+	padding-top: 250px;
+}
+
+/*표지 사진 영역*/
+figure img{
+	
+	
+	width: 100%;
+	height: 100%;
+	opacity: 0.7; /*사진투명도 설정*/
+	position: absolute; /*자식 요소 absolute*/
+	top:0px;
+	left:0px;
+}
+
+
+figure .inner{
+	width:1180px;
+	margin:300px auto;
+	position: relative;
+	
+
+}
+figure .inner h1{
+	text-align: left;
+	font: normal 120px/1 "arial";
+	color:#fff;
+	margin-bottom:20px; /*AWESOME과 문단 사이 공간 띄우기*/
+}
+
+figure .inner p{
+	
+	font: 16px/1.4 "arial";
+	color: #fff;
+	
+	
+}
+
+
+
+/*section영역 설정*/
+
+section{
+	width:100%;
+	padding:100px;
+}
+section .inner{
+	width: 1180px;
+	margin: 0px auto;  /*좌우 margin auto설정-> 자옹으로 좌우정렬됨*/
+
+}
+
+/* 'ABOUT ssohee' 글자 속성 */
+section .inner h1{
+	font: bold 24px/1 "arial";
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+/*section 영역 밑 여유공간 확보(답답해보이지 않기 위해)*/
+section .inner .wrap{
+	width:100%;
+	margin-bottom: 50px; 
+}
+
+/*사진 4개 띄우기*/
+section .inner .wrap::after{/*자식요소인 article의 float 해제 */
+	content: "";
+	display: block;
+	clear: both;
+}
+section .inner .wrap article{
+	width: 280px;
+	height: 280px;
+	float: left;  /*블록요소를 강제로 띄워서 화면 왼쪽에 배치*/
+	margin-right:20px;
+}
+section .inner .wrap article:last-child{/*맨 오른쪽 마지막 요소의 여백만 제거
+	여백 없애지 않으면 전체 .inner의 너빗값은 1180px 인데 article요소의
+커서오른쪽 여백을 포함한 전체 너빗값이 1200px이므로 부모 영역의 너빗값보다 커서
+4번째 article요소가 아래쪽으로 떨어져서 배치됨*/
+	margin-right:0px;
+}
+
+
+/*각 메뉴(사진과 그 주변 영역)별 글자 속성*/
+
+section .inner .wrap article h2{
+	margin-bottom:10px;
+}
+section .inner .wrap article h2 a{
+	font: bold 16px/1 "arial";
+	color: #555;
+
+}
+section .inner .wrap article p{
+	font: 14px/1.4 "arial";
+	color:#777;
+}
+
+/*사진 속성*/
+section .inner .wrap article .pic{
+	width: 100%;
+	height: 100%;
+	background: #333;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden; /*크기 넘치면 숨김처리*/
+}
+section .inner .wrap article .pic img{
+	object-fit: cover; /*pic 프레임 안에 이미지를 꽉 채움*/
+	width: 100%;
+	height: 100%;
+}
+

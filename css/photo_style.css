@@ -1,0 +1,42 @@
+@charset 'utf-8';
+* {
+	margin: 0px;
+	padding: 0px;
+	
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+
+/* 글자들 속성 */
+h1,h2,p{
+	margin: 10px;
+	text-align:center;
+}
+
+/* 표 가운데 정렬되도록 */
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 사진 크기정하기 */
+img {
+	
+	width: 500px;
+	height: 300px;
+	padding : 10px; 
+
+	object-fit: cover; /*표 크기 안에 사진 (원비율 일그러지지 않는 선에서) 꽉 차게 설정. */
+}
+
+/* 표 글자 가운데 정렬 */
+div{
+	text-align:center;
+	padding-bottom:10px;
+}
